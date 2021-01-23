@@ -25,8 +25,6 @@ Sign in with your Github account and fork this repo.
 `MONGO_DB_URI` str: your MongoDB URI (you can get one for free in their [official website](https://mongodb.com/), sign up, create a cluster and a database named "vcpb")
 
 `USERS_MUST_JOIN` : If true, only users which are in the group can use the bot.
-
-`LOG` : if true, now playing messages will be sent to the group
     
 `LANG` : your bot language, choose an available language code in [VoiceChatPyroBot](https://github.com/rojserbest/VoiceChatPyroBot/tree/main/strings)
 
@@ -38,13 +36,12 @@ Sign in with your Github account and fork this repo.
   API_HASH
   TOKEN
   SUDO_USERS
-  GROUP  (If LOG or USERS_MUST_JOIN is set to True)
+  GROUP  (If USERS_MUST_JOIN is set to True)
   ~~~
 * If the remaining values are not set then the Default values are:
 ~~~
  MONGO_DB_URI = None
  USERS_MUST_JOIN = False
- LOG = False
  LANG = en (english)
  DUR_LIMIT = 10
 ~~~
@@ -68,7 +65,11 @@ Sign in with your Github account and fork this repo.
 * If you want to edit the username and password , you can do it by editing the values in [createusers.txt](https://github.com/subinps/docker-ubuntu-xrdp-mate-custom-VCPB/blob/master/createusers.txt) file. the foremat is username:password:is SUDO or not(Y/N)
   * ℹ️ If you are changing the default user , you may need to change the same in [script.sh](https://github.com/subinps/docker-ubuntu-xrdp-mate-custom-VCPB/blob/master/script.sh) also .
 
-* Once after loging in ,  you can see a file named Telegram in  /home/vcpb/Telegram Directory 
+* Once after loging in ,  you can see a file named Telegram in  /home/vcpb/Telegram Directory (You may see some error messages, since i debloated many mate utils , ignore(delete) those.)
 
 * Execute it and login into your telegram account and Join a Voicechat.
   * ℹ️ No need to change the default microphone as MySink is already default Mic.
+  
+## Credit and Thanks
+* [VoiceChatPyroBot](https://github.com/rojserbest/VoiceChatPyroBot) 
+* [RattyDAVE/docker-ubuntu-xrdp-mate-custom](https://github.com/RattyDAVE/docker-ubuntu-xrdp-mate-custom)
