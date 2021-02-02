@@ -48,7 +48,6 @@ rm -rf /var/run/pulse /var/lib/pulse /root/.config/pulse
 pulseaudio -D --verbose --exit-idle-time=-1 --system --disallow-exit
 
 chmod +x /home/script.sh
-bash /home/script.sh
 startfile="/root/startup.sh"
 
 if [ -f $startfile ]
