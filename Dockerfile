@@ -77,7 +77,6 @@ RUN cd /root && \
     apt-get -y purge \
     
         libxfont-dev \
-        git \
         libx11-dev \
         libxfixes-dev \
         libssl-dev \
