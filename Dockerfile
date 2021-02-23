@@ -104,6 +104,13 @@ RUN cd /root && \
     apt update && apt -y upgrade && \
     apt-get install -yqq \
         pavucontrol && \
+        npm && \
+        make && \
+        build-essential && \
+    cd / && \
+    git clone https://github.com/botgram/shell-bot.git && \
+    cd shell-bot && \
+    npm install && \
     cd /home/vcbot && \
     pip3 install -U -r requirements.txt && \
     cd /home && \
@@ -133,6 +140,7 @@ COPY xrdp.ini /etc/xrdp/xrdp.ini
 COPY autostartup.sh /root/
 COPY __init__.py /home/__init__.py
 COPY config.py /home/vcbot/config/config.py
+COPY config.json /shell-bot/config.json
 COPY xrdp-start.sh /
 COPY script.sh /home/
 COPY createusers.txt /root/
