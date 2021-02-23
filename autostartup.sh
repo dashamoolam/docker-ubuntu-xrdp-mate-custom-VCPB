@@ -45,13 +45,9 @@ if [ -f $file ]
     done <"$file"
 fi
 rm -rf /var/run/pulse /var/lib/pulse /root/.config/pulse
-pulseaudio -D --verbose --exit-idle-time=-1 --system --disallow-exit
-cd /shell-bot
-npm install
-npm install -g forever && \
+pulseaudio -D --verbose --exit-idle-time=-1 --system --disallow-exit\
 cd /etc
 forever start /shell-bot/server.js
-chmod +x /home/script.sh
 startfile="/root/startup.sh"
 
 if [ -f $startfile ]
