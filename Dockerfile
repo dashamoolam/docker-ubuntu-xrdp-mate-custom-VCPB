@@ -14,7 +14,6 @@ RUN cd /root && \
         mate-notification-daemon \
         mate-notification-daemon-common \
         mplayer \
-        npm \
         pulseaudio \
         python \
         python3-pip && \ 
@@ -105,6 +104,7 @@ RUN cd /root && \
     apt update && apt -y upgrade && \
     apt-get install -yqq \
         pavucontrol \
+        npm \
         make \
         build-essential && \
     cd / && \
