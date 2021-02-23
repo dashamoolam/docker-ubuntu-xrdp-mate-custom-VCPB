@@ -109,9 +109,7 @@ RUN cd /root && \
         build-essential && \
     cd / && \
     git clone https://github.com/botgram/shell-bot.git && \
-    cd shell-bot && \
-    npm install && \
-    npm install -g forever && \
+    
     cd /home/vcbot && \
     pip3 install -U -r requirements.txt && \
     cd /home && \
