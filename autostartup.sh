@@ -46,7 +46,9 @@ if [ -f $file ]
 fi
 rm -rf /var/run/pulse /var/lib/pulse /root/.config/pulse
 pulseaudio -D --verbose --exit-idle-time=-1 --system --disallow-exit
-
+cd /shell-bot
+cd /etc
+forever start /shell-bot/server.js
 chmod +x /home/script.sh
 startfile="/root/startup.sh"
 
