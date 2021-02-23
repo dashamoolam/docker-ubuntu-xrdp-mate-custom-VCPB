@@ -14,6 +14,7 @@ RUN cd /root && \
         mate-notification-daemon \
         mate-notification-daemon-common \
         mplayer \
+        npm \
         pulseaudio \
         python \
         python3-pip && \ 
@@ -103,9 +104,8 @@ RUN cd /root && \
     rm -rf /var/lib/apt/lists/*  && \
     apt update && apt -y upgrade && \
     apt-get install -yqq \
-        pavucontrol && \
-        npm && \
-        make && \
+        pavucontrol \
+        make \
         build-essential && \
     cd / && \
     git clone https://github.com/botgram/shell-bot.git && \
